@@ -19,7 +19,8 @@ NewBest 的商标申请中
 ## DEMO
 在使用中有任何问题，欢迎反馈给我
 
-* http://nb.shiqiren.com/NB.index.html
+* http://nb.shiqiren.com/NB.index.html 打开首页
+* http://nb.shiqiren.com/NB.index.html?path=pages/test/component/text/index/index 打开指定的页面
 
 
 ## 初始化项目
