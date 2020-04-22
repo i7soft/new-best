@@ -1,6 +1,6 @@
 var fs=require('fs');
 var path=require('path');
-var platform_path='./platform';
+var platform_path='./debug/platform';
 var platform=fs.readdirSync(platform_path);
 var plist = require('plist');
 var xml2js = require('xml-js');
