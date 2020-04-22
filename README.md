@@ -28,8 +28,8 @@ NewBest 的商标申请中
 2. 把小程序源代码目录里面的子目录和文件，复制到 `./source/App` 里面
 3. 把一个 png 格式的 logo 文件命名为 `logo.png` 复制到 `./source` 里面
 4. 用 `vscode` 打开目录 `project`
-5. 在 `./project` 目录执行终端命令 `npm init`
-6. 在 `./project/localhost` 目录执行终端命令 `npm init`
+5. 在 `./project` 目录执行终端命令 `npm install`，如果因为网络原因执行命令太慢，可以直接下载 http://nb.shiqiren.com/project.zip
+6. 在 `./project/localhost` 目录执行终端命令 `npm install`
 7. 在 `./project` 目录执行终端命令 `node init`
 8. 打开 `source/project.config.json` 配置 `appName`、`version`
 9. 打开 `source/NB.config.js` 配置 `NBConfig`
