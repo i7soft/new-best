@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{appName}}</title>
+    <meta name="application-name" content="{{appName}}" />
+    <!-- appLogo -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover"/>
+    <meta name="format-detection"  content="telephone=no"/>
+    <meta  http-equiv="x-rim-auto-match" content="none"/>
+    <!-- 禁止百度转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit"/>
+
+    <link rel="shortcut icon" href="./logo/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./logo/icon_homeButton.png" />
+    <link rel="icon" href="./logo/icon_favicon.gif" />
+    <meta name="msapplication-square70x70logo" content="./logo/tile_squareSmall.png" />
+    <meta name="msapplication-square150x150logo" content="./logo/tile_squareMedium.png" />
+    <meta name="msapplication-square310x310logo" content="./logo/tile_squareLarge.png" />
+    <style>
+        html,body{
+            width: 100%;height: 100%;margin: 0;padding: 0;
+        }
+        body > div.init_loader {
+            display: none;
+            padding-top: 32px;
+            text-align: center;
+        }
+        body > div.init_loader .typing_loader {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            animation: typing 1s linear infinite alternate;
+            margin: 32px auto;
+            position: relative;
+            left: -12px;
+        }
+        body > div.init_loader img {
+            width: 96px;
+            border-radius: 64px;
+        }
+        @keyframes typing{
+            0%{
+                background-color: rgba(0,0,0, 1);
+                box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),
+                            24px 0px 0px 0px rgba(0,0,0,0.2);
+            }
+            25%{
+                background-color: rgba(0,0,0, 0.4);
+                box-shadow: 12px 0px 0px 0px rgba(0,0,0,1),
+                            24px 0px 0px 0px rgba(0,0,0,0.2);
+            }
+            75%{ background-color: rgba(0,0,0, 0.4);
+                box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),
+                            24px 0px 0px 0px rgba(0,0,0,1);
+            }
+        }
+    </style>
+    <!-- 模拟多点触摸 -->
+    <!-- <script src="multiTouch.js"></script> -->
+    <!-- 如果开发的移动端网页应用是基于微信的，需要先引入微信的 js-SDK -->
+    <!-- 根据您的域名是否启用 https 来选择用哪个 -->
+    <!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <!-- this line will be replaced with "wx.config" -->
+    <!-- 这里注入微信 wx jsapi 的配置（需要后台代码） -->
+    <!-- wx.config -->
+    <!-- <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=URBBZ-VQ3WW-AGHRS-RZYBG-HVQJQ-EQBS"></script> -->
+    <script charset="utf-8" src="/I7/debug/NB.config.js?v=1.35"></script>
+    <script src="./NB.sdk.js"></script>
+</head>
+<body>
+    
+    <div class="init_loader">
+            <img src="./logo/tile_squareSmall.png"/>
+        <div class="init_loader typing_loader"></div>
+    </div>
+</body>
+</html>

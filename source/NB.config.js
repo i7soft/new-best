@@ -134,7 +134,12 @@ NBConfig = {
                
                 return true;//也可以根据条件选择性打开，如针对某个用户等
             })(),
-            
+            map:{
+                use:'amap',
+                amap:{
+                    key:'29228e017363979fddcc9352334aab5e'
+                },
+            }
         },
         desktop:{//桌面程序
             // path:'pages/index/index',
