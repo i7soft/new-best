@@ -7,6 +7,7 @@ var babel = require("@babel/core");
 const mime = require('mime');
 var Terser = require("terser");
 var fsUtils = require("nodejs-fs-utils");
+require('./source/NB.config');
 
 function readDirSync(path,func){
 	var pa = fs.readdirSync(path);
@@ -277,20 +278,24 @@ fs.linkSync(__dirname+'/source/NB.sdk.js',sdk_path);
 // if(!fs.existsSync(path.join(platform_path,'web','App'))){
 //     fs.symlinkSync(path.join(__dirname,'release','App'),path.join(platform_path,'web','App'));
 // }
-if(fs.existsSync(path.join(platform_path,'web','App'))){
-    fsUtils.rmdirsSync(path.join(platform_path,'web','App'));
+
+var web_app_path=NBConfig.rootPath.release || 'App';
+var web_app_full_path=path.join(platform_path,'web',web_app_path);
+if(fs.existsSync(web_app_full_path)){
+    fsUtils.rmdirsSync(web_app_full_path);
 }
-fsUtils.copySync(path.join(__dirname,'release','App'),path.join(platform_path,'web','App'),function(){},{});
+fsUtils.copySync(path.join(__dirname,'release','App'),web_app_full_path,function(){},{});
 
 // if(!fs.existsSync(path.join(platform_path,'web','logo'))){
 //     fs.symlinkSync(path.join(__dirname,'platform','web','logo'),path.join(platform_path,'web','logo'));
 // }
-if(fs.existsSync(path.join(platform_path,'web','logo'))){
-    fsUtils.rmdirsSync(path.join(platform_path,'web','logo'));
+var web_logo_full_path=path.join(platform_path,'web','logo');
+if(fs.existsSync(web_logo_full_path)){
+    fsUtils.rmdirsSync(web_logo_full_path);
 }
-fsUtils.copySync(path.join(__dirname,'platform','web','logo'),path.join(platform_path,'web','logo'),function(){},{});
+fsUtils.copySync(path.join(__dirname,'platform','web','logo'),web_logo_full_path,function(){},{});
 
-readDirSync(path.join(platform_path,'web','logo'),function(item,fileName){
+readDirSync(web_logo_full_path,function(item,fileName){
     if(item.indexOf('.DS_Store')>-1) return;
     app_cache+='logo/'+fileName+'\n';
 });
