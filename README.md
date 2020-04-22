@@ -67,7 +67,7 @@ NewBest 的特点是，直接把小程序开发的文件夹丢进来就可以直
     - `web.config.js`后台域名配置和端口配置，为了便于本地调试，可以修改本地的 host 文件，或者在路由器直接修改 host（本人用的是 360 的路由器，可以在路由的层面上直接修改 host）
 + `debug`
     - `platform`
-        - `web` release 模式下的代码
+        - `web` debug 模式下的代码
 + `release`
     - `platform`
         - `web` release 模式下的代码
