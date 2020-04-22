@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "aaa": "../components/aaa",
+    "bbb": "../components/bbb",
+    "ccc": "../components/ccc",
+    "selectable-group": "../components/selectable-group",
+    "custom-radio": "../components/custom-radio",
+    "custom-checkbox": "../components/custom-checkbox"
+  }
+}

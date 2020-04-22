@@ -1,0 +1,2 @@
+<web-view wx:if="{{showWebView}}" src="{{value}}"></web-view>
+<text wx:else style="display:block;width:100%;height:100%">{{value}}</text>

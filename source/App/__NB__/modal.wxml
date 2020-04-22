@@ -1,0 +1,14 @@
+<block wx:if="{{_show}}">
+    <view wx:for="{{list}}" wx:key="{{index}}" class="wrapper">
+        <view wx:if="{{index==0}}" class="mask {{animationName_mask}}" catchtap="onCancel"></view>
+        <view wx:else class="mask" catchtap="onCancel"></view>
+        <view class="modal {{item.animation}}" catchanimationend="onAnimationEnd">
+            <view class="hd">{{item.title}}</view>
+            <view class="bd">{{item.content}}</view>
+            <view class="ft">
+                <view hidden="{{!item.showCancel}}" class="btn" style="color:{{item.cancelColor}};border-right:1rpx solid #ddd" catchtap="onCancel">{{item.cancelText}}</view>
+                <view class="btn" style="color:{{item.confirmColor}}" catchtap="onConfirm">{{item.confirmText}}</view>
+            </view>
+        </view>
+    </view>
+</block>

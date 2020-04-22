@@ -1,0 +1,3 @@
+<view id="a1">nini</view>
+<view id="a2" wx:if="{{aaa}}">bobo</view>
+<view id="a3">mimi</view>

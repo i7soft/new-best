@@ -1,0 +1,5 @@
+<!--index/aaa.wxml-->
+<text>index/aaa.wxml</text>
+<view>
+  <slot/>
+</view>

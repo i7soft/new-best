@@ -1,0 +1,25 @@
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    justify-content: center;
+    padding: 32px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icon{
+    font-size: 200rpx;
+    color: #ccc;
+    line-height: 1;
+    margin-bottom: 64rpx;
+}
+
+.text{
+    color: #666;
+    font-size: 28rpx;
+}

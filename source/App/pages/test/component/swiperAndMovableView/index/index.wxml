@@ -1,0 +1,96 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper" style='padding:0;background:#000'>
+        <!-- <swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" bindanimationfinish="aaa" bindchange="aaa" current="{{current}}" style='height:400rpx;width:750rpx' display-multiple-items="2">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item item-id="{{index}}" style="height:100%;width:100%">
+            <view class="swiper-item {{item}}" style="height:100%">
+            
+            </view>
+          </swiper-item>
+        </block>
+      </swiper> -->
+      <view class="swiper">
+          <view class="slides" animation="{{animationSlides}}" catchtouchstart="onDragStart" catchmousedown="onDragStart" catchtouchmove="onDragMove" catchmousemove="onDragMove" catchtouchend="onDragEnd" catchmouseup="onDragEnd" catchtouchcancel="onDragEnd" catchwheel="">
+              <view class="item" style="transform:translate3d({{index*100}}%,0,0)" wx:for="{{itemList}}" wx:key="{{index}}">
+                <image src="{{item.url}}" style="width:{{item.width?item.width+'px':'100%'}};height:{{item.height?item.height+'px':'100%'}};left:{{item.x}}px;top:{{item.y}}px;position:absolute" mode="aspectFit" lazy-load bindload="image_onLoad" data-index="{{index}}"></image>
+              
+            </view>
+          </view>
+        </view>
+      <!-- <swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" bindchange="swiper_onChange" current="{{current}}" style='height:800rpx;width:750rpx;margin-left:-0rpx' display-multiple-items="1">
+        <block wx:for="{{itemList}}" wx:key="{{index}}">
+          <swiper-item item-id="{{index}}" style="height:100%;width:100%">
+            <movable-area scale-area style="width:750rpx;height:100%;margin:0 0rpx">
+              <movable-view style="width:{{item.width?item.width+'px':'100%'}};height:{{item.height?item.height+'px':'100%'}}" out-of-bounds direction="{{item.scale==1?'none':'all'}}" scale scale-min="1" scale-max="{{item.scaleMax}}" scale-value="{{item.scaleValue}}" x="{{item.x}}" y="{{item.y}}" out-of-bounds inertia animation="{{false}}" data-index="{{index}}" bindscale="image_onScale" bindtouchstart="image_onTouchStart" catchtouchmove="{{item.isLock?'image_onTouchMove':null}}">
+                <image src="{{item.url}}" style="width:100%;height:100%" mode='aspectFit' lazy-load bindload="image_onLoad" data-index="{{index}}"></image>
+              </movable-view>
+            </movable-area>
+          </swiper-item>
+        </block>
+      </swiper> -->
+      
+    </view>
+ 
+    <view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__ft">
+            <button bindtap="bbb">bbb</button>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd"><label for="aaa">指示点</label></view>
+          <view class="weui-cell__ft">
+            <switch id="aaa" checked="{{indicatorDots}}" bindchange="changeProperty" data-property-name="indicatorDots" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">自动播放</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{autoplay}}" bindchange="changeProperty" data-property-name="autoplay" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">衔接滑动</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{circular}}" bindchange="changeProperty" data-property-name="circular" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">竖向</view>
+          <view class="weui-cell__ft">
+            <switch checked="{{vertical}}" bindchange="changeProperty" data-property-name="vertical" />
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="page-section page-section-spacing">
+      <view class="page-section-title">
+        <text>幻灯片切换时长(ms)</text>
+        <text class="info">{{duration}}</text>
+      </view>
+      <slider value="{{duration}}" min="500" max="2000" bindchange="changeProperty" data-property-name="duration" />
+      <view class="page-section-title">
+        <text>自动播放间隔时长(ms)</text>
+        <text class="info">{{interval}}</text>
+      </view>
+      <slider value="{{interval}}" min="2000" max="10000" bindchange="changeProperty" data-property-name="interval" />
+      <view class="page-section-title">
+        <text>前边距(px)</text>
+        <text class="info">{{previousMargin}}</text>
+      </view>
+      <slider value="{{previousMargin}}" min="0" max="50" bindchange="changeProperty" data-property-name="previousMargin" />
+      <view class="page-section-title">
+        <text>后边距(px)</text>
+        <text class="info">{{nextMargin}}</text>
+      </view>
+      <slider value="{{nextMargin}}" min="0" max="50" bindchange="changeProperty" data-property-name="nextMargin" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="wrapper">
+    <view hidden="{{_reload}}" class="nb-loading nb-loading-icon"></view>
+    <view hidden="{{!_reload}}" class="wrapper" catchtap="reload">
+        <text class="reload">{{text}}</text>
+    </view>
+</view>

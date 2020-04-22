@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "aa": "./comp/test/test1"
+  }
+}

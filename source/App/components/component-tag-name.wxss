@@ -1,0 +1,8 @@
+/* components/component-tag-name.wxss */
+
+.aaa{
+    color:#000
+}
+:host{
+    color:#000
+}

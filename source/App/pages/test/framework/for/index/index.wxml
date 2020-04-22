@@ -1,0 +1,8 @@
+<view class="group">
+  <view wx:for="{{icon}}">
+    <block wx:for="{{item.type}}" wx:for-item="item2">
+      <icon type="{{item2}}" size="{{item.size}}"/>
+    </block>
+  </view>
+</view>
+<button bindtap='aaa'>sisi</button>

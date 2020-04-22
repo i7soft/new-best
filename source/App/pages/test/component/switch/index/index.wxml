@@ -1,0 +1,25 @@
+<view class="page">
+    <view class="page__hd">
+        <text class="page__title">switch</text>
+        <text class="page__desc">开关</text>
+    </view>
+    <view class="page__bd">
+        <view class="section section_gap">
+            <view class="section__title">type="switch"</view>
+            <view class="body-view" bindtap='aaa'>
+                <switch checked="{{switch1Checked}}" bindchange="switch1Change"/>
+            </view>
+        </view>
+
+        <view class="section section_gap">
+            <view class="section__title">type="chec\nkbox"</view>
+            <view class="body-view">
+           
+            <switch disabled id="aaa" type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change">99999</switch>
+             
+                <label id="999" for="  ">55555<switch id="{{text}}" type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change">88888</switch><text id="888">44\n44</text></label>
+                
+            </view>
+        </view>
+    </view>
+</view>

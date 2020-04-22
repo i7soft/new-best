@@ -1,0 +1,3 @@
+<!--index/bb.wxml-->
+<text>index/bb.wxml</text>
+<slot/>

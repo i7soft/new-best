@@ -1,0 +1,14 @@
+<view class="wrapper" wx:if="{{_show}}">
+    <view class="mask {{animationName_mask}}" catchanimationend="onAnimationEnd" catchtap="onCancel"></view>
+    <view class="picker {{animationName_picker}}">
+        <view class="hd">
+            <view class="action" catchtap="onCancel">{{button_cancel}}</view>
+            <view class="action" catchtap="onConfirm">{{button_ok}}</view>
+        </view>
+        <view class="bd">
+            <picker-view style="flex:1" value="{{_value}}" bindchange="onPickerChange">
+                <picker-view-column hidden="{{!item}}" wx:for="{{_range}}" wx:key="{{index}}" source="{{item}}"></picker-view-column>
+            </picker-view>
+        </view>
+    </view>
+</view>

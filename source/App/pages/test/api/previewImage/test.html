@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>example</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            /*background-color: rgb(241,124,103);*/
+        }
+        .title{
+            color: rgb(46,104,170);
+            text-align: center;
+            line-height: 50px;
+            margin-top: 30px;
+        }
+        .wrap{
+            width: 100%;
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+            color:rgb(46,104,170);
+        }
+        .area{
+            position: relative;
+            width: 90%;
+            height: 300px;
+            border: 2px solid rgb(46,104,170);
+            margin-bottom: 30px;
+            overflow: hidden;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+        }
+        .el{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgb(241,124,103);
+            left: 50%;
+            top: 50%;
+            margin: -50px 0 0 -50px;
+        }
+        .el.active{
+            outline: 2px solid black;
+            z-index: 99;
+        }
+        .el.active .mtouch-singleButton{
+            display: inline-block;
+        }
+        .js-drag-el .mtouch-singleButton{
+            display: none;
+        }
+        .subtitle{
+            color: rgb(241,124,103);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .mask{
+            width: 100%;
+            height: 100%;
+            background: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+            color: #996699;
+            font-size: 24px;
+            text-align:center;
+            padding-top: 100px;
+            box-sizing: border-box;
+            display: none;
+        }
+        .wrap,.area{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+        .js-drag-el{
+            border: 0;
+            width: 100%;
+            height: 100%;
+            background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552969687631&di=e0cc9c175b4174bec9af7b5419c8dc77&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F318a3b33b7bb93e4250aae9346f890f03505a700.jpg);
+            background-size: contain;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            padding: 0;
+            margin: 0;
+            background-color: #000
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="mask js-mask">please open in the mobile or use the device mode of browser!</div>
+    <h1 class="title">MTouch.js</h1> -->
+    <div class="wrap">
+        <div class="js-area area drag">
+            all gesture
+            <!-- <div class="el js-drag-el a" style="left:70%;top:50%;"></div> -->
+            <div class="el js-drag-el b active" style="left:0;top:0;margin:0"></div>
+        </div>
+        <!-- <div class="area pinch">
+            pinch
+            <div class="el js-pinch-el"></div>
+        </div>
+        <div class="area rotate">
+            rotate
+            <div class="el js-rotate-el"></div>
+        </div>
+        <div class="area singlePinch">
+            singlePinch
+            <div class="el js-singlePinch-el js-singlePinch-el"> -->
+                <!-- <div class="single js-singlePinch"></div> -->
+            <!-- </div>
+        </div>
+        <div class="area singleRotate">
+            singleRotate
+            <div class="el js-singleRotate-el"> -->
+                <!-- <div class="single js-singleRotate"></div> -->
+            <!-- </div>
+        </div> -->
+    </div>
+    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="./test.js"></script>
+</body>
+</html>

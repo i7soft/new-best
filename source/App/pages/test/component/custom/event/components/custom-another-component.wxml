@@ -1,0 +1,12 @@
+<!--components/custom-another-component.wxml-->
+<view id="nini" bind:customevent="anotherEventListener" bindtap="onTap">
+ <!-- <template is="aaa"/> -->
+  <!-- <view>1111</view> -->
+    <slot id="slot" bind:customevent="anotherEventListener">232323</slot>  
+    <view>-----------------</view>
+    <my-component id="mimi" bind:customevent="pageEventListener2" capture-catch:customeventp="pageEventListener3"></my-component>
+</view>
+<!-- <template name="aaa">
+<view> <slot name="bobo" id="aaa"/></view>
+
+</template> -->

@@ -1,0 +1,7 @@
+<!-- 组件模板 -->
+<view data-mimi="nini" class="wrapper">
+
+  <view hover-class='aaa'><slot></slot></view>
+  <input  bindinput="bindReplaceInput" placeholder="连续的两个1会变成2" placeholder-class="aaa"/>
+  <bobo class="bobo" data-a="b"></bobo>
+</view>

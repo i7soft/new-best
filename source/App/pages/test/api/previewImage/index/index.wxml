@@ -1,0 +1,4 @@
+
+<view class="intro">
+    <button bindtap="tap1">预览图片</button>
+</view>

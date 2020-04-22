@@ -1,0 +1,27 @@
+{
+    "logo":"./logo.png",
+    "autoGenerateIcon":{
+        "web":{
+            "favicon":true,
+            "icon_favicon":true,
+            "tile_squareLarge":true,
+            "tile_squareMedium":true,
+            "tile_squareSmall":true,
+            "icon_homeButton":true
+        }
+    },
+    "sdk":{
+        "version":2.0,
+        "key":"bobo"
+    },
+    "appName":"十七人世界",
+    "version":"1.0.17",
+    "appId":{
+        "ios":"com.shiqiren.app",
+        "android":"com.shiqiren.app",
+        "mac":"com.shiqiren.app",
+        "windows":"com.shiqiren.app",
+        "linux":"com.shiqiren.app",
+        "others":"com.shiqiren.app"
+    }
+}

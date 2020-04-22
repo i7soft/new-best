@@ -1,0 +1,71 @@
+<!-- 引用组件的页面模版 -->
+<!-- <aaa bindcustomevent="aaa">
+   <bbb bindcustomevent="bbb"> 
+     <ccc bindcustomevent="ccc">
+    </ccc> 
+   </bbb> 
+</aaa> -->
+<!-- <aaa bindcustomevent="aaa"> 
+     <ccc bindcustomevent="ccc">
+    </ccc> 
+</aaa> -->
+<aaa bindcustomevent="aaa"> 
+</aaa>
+<wxs module="bobo">
+  var propObserver=function(newValue, oldValue, ownerInstance, instance) {
+    console.log('prop observer', newValue, oldValue)
+    //console.log(instance.selectComponent)
+    //instance.callMethod('wxs',{newValue:newValue, oldValue:oldValue, ownerInstance:ownerInstance, instance:instance})
+    var a = ownerInstance.selectAllComponents('.item,.page-body');
+    console.log(JSON.stringify(a));
+    //var b = ownerInstance.selectComponent('.page-body');
+    //console.log(a.getState()==b.getState())
+    //instance.requestAnimationFrame(function(){
+    //  console.log(JSON.stringify(this));
+    //})
+  }
+  var wxsFunction = function (event, ownerInstance) {
+    console.log(event, ownerInstance)
+    var instance=event.instance;
+    //const instance = ownerInstance.selectComponent('.classSelector') // 返回组件的实例
+    instance.setStyle({
+      'font-size': '60rpx' // 支持rpx
+    });
+    //instance.getDataset()
+    instance.setClass('bobo');
+
+    console.log(instance.hasClass('bobo'))
+    // ...
+    return false // 不往上冒泡，相当于调用了同时调用了stopPropagation和preventDefault
+  }
+      module.exports={propObserver :propObserver,wxsFunction:wxsFunction};
+</wxs>
+<view>
+  <another-component id="bobo" bind:customevent="pageEventListener1">
+    <my-component change:aaa="{{bobo.propObserver}}" aaa="{{sisi}}" id="mimi" bind:customevent="pageEventListener2" capture-catch:customeventp="pageEventListener3"></my-component>
+    <view bindtap="{{bobo.wxsFunction}}">love</view>
+    <!-- <block>
+       <view  slot="bobo" bindtap='aaa' catchtap='bbb' capture-bind:tap='ccc'>aaa</view> 
+    </block>
+      <template is="aaa"/> -->
+     
+  </another-component>
+ 
+</view>
+<button bindtap='sisi'>bobo</button>
+<view id="outer" catch:touchstart="handleTap1" capture-catch:touchstart="handleTap2">
+  outer view
+  <view id="inner" catch:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
+    inner view
+  </view>
+</view>
+
+<template name="aaa">
+<block>
+       <view  slot="bobo" bindtap='aaa' catchtap='bbb' capture-bind:tap='ccc'>bbb</view> 
+    </block> 
+
+</template>
+
+<selectable-group generic:selectableAaa="custom-radio" />
+ <selectable-group /> 

@@ -1,0 +1,12 @@
+.radio-group {
+    border-bottom: 1px solid #ddd;
+}
+.radio {
+    
+    border-top: 1px solid #ddd;
+    padding: 5px;
+}
+label{
+  width: 100%;
+  display: block;
+}

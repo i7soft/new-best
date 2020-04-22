@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "aaa": "../components/aaa",
+    "bbb": "../components/bbb",
+    "ccc": "../components/ccc"
+  },
+  "componentGenerics": {
+    "selectable": true
+  }
+}

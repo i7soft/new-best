@@ -1,0 +1,3 @@
+<!--components/bbb.wxml-->
+<text>components/bbb.wxml</text>
+<slot/>

@@ -1,0 +1,6 @@
+<wxs module="m2">
+var msg = "hello bobo";
+
+module.exports.message = msg;
+</wxs>
+<text>mimi{{m1.message}}</text>

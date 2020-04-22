@@ -1,0 +1,19 @@
+<!-- <view id="outer" bindtap="handleTap1">
+  outer view
+  <view id="middle" catchtap="handleTap2">
+    middle view
+    <view id="inner" bindtap="handleTap3">
+      inner view
+    </view>
+  </view>
+</view> -->
+
+<view id="outer" bindtransitionend="handleTap1">
+    outer view
+    <view id="middle" hover-class="bbb" bindtransitionend="handleTap2">
+      middle view
+      <button disabled id="inner" bindtap="handleTap3">
+        inner view
+      </button>
+    </view>
+  </view> 

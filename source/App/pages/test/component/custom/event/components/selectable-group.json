@@ -1,0 +1,9 @@
+{
+  "component": true,
+  
+  "componentGenerics": {
+    "selectableAaa": {
+      "default":"./custom-checkbox"
+    }
+  }
+}

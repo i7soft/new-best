@@ -1,0 +1,63 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.5.4",
+	"appid": "wxe935787afe3a8299",
+	"projectname": "NewBest%20%E6%B5%8B%E8%AF%95",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/shop/product",
+					"query": "id=2193&cartType=&empty_orderid="
+				},
+				{
+					"id": 1,
+					"name": "店铺页面",
+					"pathName": "pages/shop/shop",
+					"query": "typelx=wm&id=245&cartType=&empty_orderid=",
+					"scene": "1047"
+				},
+				{
+					"id": 2,
+					"name": "饭局",
+					"pathName": "pages/fanju/home",
+					"query": "id=3",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "NewBest 测试",
+					"pathName": "pages/test/framework/navigator/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

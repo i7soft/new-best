@@ -1,0 +1,26 @@
+<view class="page">
+  <navigator url="/navigate/navigate?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator>
+    <view>{{year}}年{{month}}月{{day}}日</view>
+    <scroll-view scroll-x="{{true}}" style='width:100%;height:750rpx'>
+      <view style='height:{{height}}px'>
+        <picker-view style='height:100%;width:100%' value="{{bobo.sisi[0].picker}}" bindchange="bindChange" indicator-style="height:{{indicatorStyle}}px;line-height:{{indicatorStyle}}px">
+          <picker-view-column bindtap="aaa" style="background:#ff0000">
+            <view style="color:#fff" wx:for="{{years}}" wx:key="{{index}}">{{item}}年</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{months}}" wx:key="{{index}}">{{item}}月</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{days}}" wx:key="{{index}}">{{item}}日</view>
+          </picker-view-column>
+        </picker-view>
+      
+        </view>
+    </scroll-view>
+  </view>
+  <button bindtap='setHeight'>set height</button>
+  <button bindtap='changeColumnRows'>change column rows</button>
+  <text>{{aaa["fa[bbb]"]}}</text><text>{{aaa.bbb}}</text>
+  <input value='aaa {{"xxx"+bobo.sisi[0]+"yyyy"}} bbb'></input>
+  <view bindtap='bbb'>1986-10-24</view>
+  <view bindtap='ccc'>1986-10-24</view>

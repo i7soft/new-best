@@ -1,0 +1,8 @@
+<!--components/bbb.wxml-->
+<view bindcustomevent="onEvent">
+<text>components/bbb.wxml</text>
+<ccc bindcustomevent="ccc">
+  <slot/>
+</ccc>
+<!-- <slot/> -->
+</view>

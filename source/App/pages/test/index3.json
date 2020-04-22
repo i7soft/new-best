@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "custom-ul": "/components/custom-ul-component",
+    "custom-li": "/components/custom-li-component",
+    "bbb":"/components/bbb"
+  }
+}

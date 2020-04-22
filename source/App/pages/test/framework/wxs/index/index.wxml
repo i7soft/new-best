@@ -1,0 +1,23 @@
+<view> {{m1.message}} </view>
+<view class="intro">欢迎使用代码片段，可在控制台查看代码片段的说明和文档</view>
+<view>
+
+<wxs module="m1">
+var msg = "hello world";
+
+module.exports.message = msg;
+</wxs>
+
+</view>
+<view> {{m1.message}} </view>
+<wxs module="m1">
+var msg = "hello world2";
+console.log(msg);
+module.exports.message = msg;
+</wxs>
+<view> {{m1.message}} </view>
+<wxs module="nini" src="./aaa.wxs"/>
+<view> {{nini.message}} </view>
+<import src="./aaa.wxml"/>
+<template is="item" data="{{text: 'forbar'}}"/>
+<include src="./bbb.wxml"/>

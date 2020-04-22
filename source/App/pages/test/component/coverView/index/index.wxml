@@ -1,0 +1,9 @@
+<cover-view scroll-top="{{scrollTop}}" style="height:20px;overflow:auto">
+ <text>111\n44444\n44332222\nrfgrfee\n4444444</text>
+</cover-view>
+
+<view class="group">
+   <button bindtap="bbb">bbb</button>
+</view>
+
+<cover-image src="http://www.nowamagic.net/librarys/images/201203/2012_03_17_01.jpg"></cover-image>

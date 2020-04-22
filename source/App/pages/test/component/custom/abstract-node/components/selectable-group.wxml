@@ -1,0 +1,7 @@
+<!-- selectable-group.wxml -->
+<view wx:for="{{labels}}" wx:key="{{index}}">
+  <label>
+    <selectableA data-bobo="bobo" disabled="{{false}}"></selectableA>
+    {{item}}
+  </label>
+</view>

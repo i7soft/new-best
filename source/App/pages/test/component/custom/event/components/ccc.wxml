@@ -1,0 +1,5 @@
+<!--components/ccc.wxml-->
+<view bindtap="onTap">
+<text>components/ccc.wxml</text>
+ <selectable-group  generic:selectableAaa="custom-radio"/> 
+</view>

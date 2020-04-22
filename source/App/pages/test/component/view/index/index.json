@@ -1,0 +1,10 @@
+{
+    "navigationStyle":"default",
+    "navigationBarBackgroundColor":"#ff0000",
+    "navigationBarTitleText":"bobo",
+    "navigationBarTextStyle":"white",
+    "mobile":{
+        "navigation":{},
+        "statusBar":{}
+    }
+}

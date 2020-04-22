@@ -1,0 +1,89 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/search/location",
+        "pages/search/search",
+        "pages/cat/cat",
+        "pages/shop/shop",
+        "pages/shop/intro",
+        "pages/shop/product",
+        "pages/me/home",
+        "pages/me/fav",
+        "pages/me/coupon",
+        "pages/me/coupon_gift",
+        "pages/me/coupon_gift_detail",
+        "pages/me/address",
+        "pages/me/add_address",
+        "pages/me/mobile",
+        "pages/me/order",
+        "pages/me/order_detail",
+        "pages/me/order_ts",
+        "pages/me/message",
+        "pages/me/msg",
+        "pages/order/order",
+        "pages/order/order_ts",
+        "pages/order/pay",
+        "pages/order/payByOthers",
+        "pages/group/step1",
+        "pages/group/step1_for_lady",
+        "pages/group/step2",
+        "pages/group/shop",
+        "pages/fanju/index",
+        "pages/fanju/shop",
+        "pages/fanju/detail",
+        "pages/fanju/invite",
+        "pages/fanju/join",
+        "pages/fanju/join_success",
+        "pages/fanju/home",
+        "pages/fanju/history",
+        "pages/fanju/photos_edit",
+        "pages/fanju/photos_view",
+        "pages/fanju/circle",
+        "pages/fanju/me",
+        "pages/test/framework/navigator/index",
+        "pages/test/framework/navigator/tab1",
+        "pages/test/framework/navigator/tab2",
+        "pages/test/framework/navigator/a",
+        "pages/test/framework/navigator/b",
+        "pages/test/framework/navigator/c"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTitleText": "日日头等舱",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "position":"bottom",
+        "backgroundColor": "#f9f9f9",
+        "color": "#888888",
+        "selectedColor": "#000000",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/tabbar_home.png",
+                "selectedIconPath": "/tabbar_home_active.png"
+            },
+            {
+                "pagePath": "pages/group/step1",
+                "text": "团体订餐",
+                "iconPath": "/tabbar_group.png",
+                "selectedIconPath": "/tabbar_group_active.png"
+            },
+            {
+                "pagePath": "pages/me/home",
+                "text": "个人中心",
+                "iconPath": "/tabbar_me.png",
+                "selectedIconPath": "/tabbar_me_active.png"
+            }
+        ]
+    },
+    "usingComponents":{
+        "aaaa":"pages/test/aaa"
+    },
+    "permission":{
+
+    },
+    "workers": "pages/test/framework/worker/workers"
+}

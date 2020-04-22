@@ -1,0 +1,31 @@
+// components/aaa.js
+Component({
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    onEvent: function () {
+      console.log('in-aaa')
+    },
+    bbb: function () {
+      console.log('bbb')
+    },
+    ccc: function () {
+      console.log('ccc')
+    }
+  }
+})

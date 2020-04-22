@@ -1,0 +1,4 @@
+<view hidden="{{_show=='none'}}" class="wrapper">
+    <view class="icon nb-icon nb-icon-go-to-{{_show}}"></view>
+    <view class="text"><text>{{_text}}</text></view>
+</view>

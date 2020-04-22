@@ -1,0 +1,36 @@
+<view class="page">
+    <view class="page__hd">
+        <text class="page__title">slider</text>
+        <text class="page__desc">滑块</text>
+    </view>
+    <view app-node-name="scroll-view" class="page__bd">
+        <view class="section section_gap">
+            <text class="section__title">设置left/right icon</text>
+            <view class="body-view">
+                <slider bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" block-size="10" aaa="999"/>
+            </view>
+        </view>
+
+        <view class="section section_gap">
+            <text class="section__title">设置step</text>
+            <view class="body-view">
+                <slider  bindchanging="aaa" bindchange="slider2change" step="5"/>
+            </view>
+        </view>
+
+        <view class="section section_gap">
+            <text class="section__title">显示当前value</text>
+            <view class="body-view">
+                <slider value='50' disabled bindchange="slider3change" show-value>888</slider>
+            </view>
+        </view>
+
+        <view class="section section_gap">
+            <text class="section__title">设置最小/最大值</text>
+            <view class="body-view">
+                <slider bindtouchend='aaa' bindchange="slider4change" min="50" max="200" value="{{value}}" show-value/>
+            </view>
+        </view>
+    </view>
+</view>
+<button bindtap='tap'>sisi</button>

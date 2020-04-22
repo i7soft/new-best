@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "my-component": "/components/component-tag-name",
+    "another-component": "/components/custom-another-component",
+    "aaa":"/components/aaa",
+    "bbb": "/components/bbb",
+    "ccc": "/components/ccc"
+  }
+}

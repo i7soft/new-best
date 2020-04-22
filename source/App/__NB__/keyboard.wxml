@@ -1,0 +1,34 @@
+<view class="wrapper {{animationName}}" wx:if="{{_show}}" catchanimationend="onAnimationEnd">
+    <view style="position:relative;height:100%;width:100%">
+        
+
+        <view wx:for="{{[1,4,7,2,5,8,3,6,9]}}" wx:key="{{index}}" class="key r-{{parseInt(index/3)+1}} c-{{parseInt((item-1)/3)+1}}">
+            <view data-char-code="{{index+1}}" hover-class="hover" hover-start-time="10" hover-stay-time="50" catchtouchend="onKeyUp">{{index+1}}</view>
+        </view>
+
+    
+
+        <view class="control r-4 c-1">
+            <view data-command="close-keyboard" hover-class="hover" hover-start-time="10" hover-stay-time="50" catchtouchend="onKeyUp" class="nb-icon nb-icon-close-keyboard"></view>
+        </view>
+        <view class="key r-4 c-2">
+            <view data-char-code="0" hover-class="hover" hover-start-time="10"  hover-stay-time="50" catchtouchend="onKeyUp">0</view>
+        </view>
+
+        <view wx:if="{{_type=='digit'}}" class="key r-4 c-3">
+            <view data-char-code="." hover-class="hover" hover-start-time="10" hover-stay-time="50" catchtouchend="onKeyUp">.</view>
+        </view>
+
+        <view wx:elif="{{_type=='idcard'}}" class="key r-4 c-3">
+            <view data-char-code="X" hover-class="hover" hover-start-time="10" hover-stay-time="50" catchtouchend="onKeyUp">X</view>
+        </view>
+    
+        <view class="key control r-1 c-4 control-backspace">
+            <view data-key-code="8" hover-class="hover" hover-start-time="10" hover-stay-time="50" catchtouchstart="onBackspaceKeyDown" catchtouchend="onBackspaceKeyUp" catchtouchcancel="onBackspaceKeyUp" class="nb-icon nb-icon-backspace"></view>
+        </view>
+        <view class="key control c-4 control-confirm">
+            <view data-key-code="13" hover-class="confirm-hover" hover-start-time="10" hover-stay-time="50" catchtouchend="onKeyUp">{{_confirmType}}</view>
+        </view>
+        
+    </view>
+</view>

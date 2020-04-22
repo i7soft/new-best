@@ -1,0 +1,38 @@
+<view wx:for="{{list}}" wx:key="a" bindtouchforcechange="touchEvent" bindlongtap='touchEvent' bindtap='touchEvent' bindtouchstart='touchEvent'>{{item.b}}</view>
+<button bindtap="changeList" style="color:{{color}}">change list</button>
+<!-- <view wx:for="{{objectArray}}" wx:key="unique" >
+  <switch style="display: block;" checked='{{item.data.value}}'> {{item.id}} </switch>
+</view> -->
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+<input value="{{objectArray}}"></input>
+<!-- <switch wx:for="{{numberArray+'0101'}}" checked="{{item=='1'}}" wx:key="{{index}}" style="display: block;"> {{item}} </switch> -->
+<button bindtap="addNumberToFront"> Add to the front </button>
+<button bindtap='aaa'>bobo</button>
+<view class="shit">
+  <aaa class="{{class}}" animation="{{animationData}}">
+    <block><view id="page_fuck" class="fuck" slot="{{slot}}">aaa<switch color="{{color}}"></switch><input/></view></block>
+  </aaa>
+</view>
+<button bindtap="setColor">Set Switch Color</button>
+<bbb>
+  <view>111</view>
+  <view>222</view>
+ 
+</bbb>
+<wxs module="m1">
+var msg = "hello world";
+
+module.exports.message = msg;
+</wxs>
+<!-- <template wx:for="{{numberArray+'0101'}}" name="objectCombine">
+  <view>111{{id}} {{m1.message}}{{item}}</view>
+</template> -->
+
+<template is="objectCombine" data="{{objectArray}}"></template>
+
+<switch wx:if="{{switch}}" color="#0000ff" checked="{{switch}}"></switch>
+<button bindtap='changeSwitch'>switch</button>
+<template is="mimi"/>
+<template is="bobo" data="{{a,b}}"/>
+<import src="aa.wxml"/>

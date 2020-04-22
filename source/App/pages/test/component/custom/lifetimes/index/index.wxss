@@ -1,0 +1,29 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+.aaa{
+  color: red
+}
+
+.bbb{
+  color:red
+}
+
+.ccc{
+  color: green
+}
+
+#middle{
+
+ 
+
+}
+
+custom-li:first-child{
+  color:blue
+}
+
+view:lang(it){
+  color:green
+}

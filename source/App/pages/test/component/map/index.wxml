@@ -1,0 +1,34 @@
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <map
+ 
+      id="myMap"
+      style="width: 100%; height: 300px;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      covers="{{covers}}"
+      circles="{{circles}}"
+      polyline="{{polyline}}"
+      polygons="{{polygons}}"
+      scale="18"
+      enable-rotate
+      show-location
+      bindregionchange=""
+      bindtap="aaa"
+      bindmarkertap="aaa"
+      bindcallouttap="aaa"
+      bindpoitap="aaa"
+      controls="{{controls}}"
+      bindcontroltap="aaa"
+    ></map>
+  </view>
+  <cover-view bindtap='record' style='width:100px;height:100px;box-shadow:0 0 4px #000;margin:20px'>111</cover-view>
+  <view class="btn-area">
+      <button bindtap="changeMarker" class="page-body-button" type="primary">更改标注点</button>
+    <button bindtap="getCenterLocation" class="page-body-button" type="primary">获取位置</button>
+    <button bindtap="moveToLocation" class="page-body-button" type="primary">移动位置</button>
+    <button bindtap="translateMarker" class="page-body-button" type="primary">移动标注</button>
+    <button bindtap="includePoints" class="page-body-button" type="primary">缩放视野展示所有经纬度</button>
+  </view>
+</view>

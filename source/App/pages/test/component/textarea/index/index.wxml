@@ -1,0 +1,18 @@
+<view class="page-body" style="background:#ccc">
+  <view class="page-section">
+    <view class="page-section-title">输入区域高度自适应，不会出现滚动条</view>
+    <view class="textarea-wrp">
+      <textarea bindlinechange="aaa" style="min-height:20px"  bindblur="bindTextAreaBlur" auto-height placeholder='come on' value="{{value}}" focus="{{focus}}"/>
+    </view>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">这是一个可以自动聚焦的textarea</view>
+    <view class="textarea-wrp">
+      <textarea style='font-size:12px;line-height:2' auto-focus="true"/>
+    </view>
+  </view>
+</view>
+
+<button bindtap="setValue">set value</button>
+<button bindtap="setFocus">set focus</button>

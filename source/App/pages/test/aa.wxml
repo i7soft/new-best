@@ -1,0 +1,13 @@
+<wxs module="m1">
+var msg = "hello world";
+
+module.exports.message = msg;
+</wxs>
+
+<view>9999
+<template name="mimi">mimi</template>
+<template name="bobo">
+  bobo333 {{m1.message}}
+  <template is="mimi"/>
+</template>
+</view>

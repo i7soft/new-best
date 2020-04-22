@@ -1,0 +1,5 @@
+
+
+var msg = require("./bbb.wxs").message;
+
+module.exports.message = msg;

@@ -1,0 +1,12 @@
+<view 
+    wx:if="{{_show}}" 
+    animation="{{animation}}"
+    style="opacity:{{opacity}};position:fixed;left:0;top:0;z-index:999999999999999;transition:opacity .5s;"
+    catchtransitionend="onTransitionEnd"
+    catchtap="goHome" 
+    catchtouchstart="onTouchStart"  
+    catchtouchmove="onTouchMove" 
+    catchtouchend="onTouchEnd" 
+    catchtouchcancel="onTouchEnd">
+    <view class="go-home nb-icon nb-icon-home"></view>
+</view>

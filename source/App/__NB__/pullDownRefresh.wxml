@@ -1,0 +1,13 @@
+<view class="wrapper" animation="{{animationData}}">
+    <view class="content">
+        <view wx:if="{{_refresh}}" class="box">
+            <view wx:for="{{[1,2,3]}}" wx:key="{{index}}" class="item item-{{item}}" style="background-color:{{_color}}"></view>
+        </view>
+        <view wx:else class="box">
+            <!-- <view class="item item-1" style="opacity:1;background-color:{{_color}};transform:translate3d(-{{_height<50?0:(_height-50)*32/100}}px,0,0) scale({{_height<20?0:_height<50?1*(_height-20)/30:1}})"></view>
+            <view class="item item-2" style="opacity:{{_height<50?1:1-0.25*-height/100}};background-color:{{_color}};transform:scale({{_height<20?0:_height<50?1.5*(_height-20)/30:1+(100-_height)/100}})"></view>
+            <view class="item item-3" style="opacity:{{_height<50?1:1-0.65*_height/100}};background-color:{{_color}};transform:translate3d({{_height<50?0:(_height-50)*32/100}}px,0,0) scale({{_height<20?0:_height<50?1*(_height-20)/30:1}})"></view> -->
+            <view wx:for="{{itemList}}" wx:key="{{index}}" class="item" style="background-color:{{_color}};opacity:{{item.opacity}};transform:translate3d({{item.left}}px,0,0) scale({{item.scale}})"></view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,2 @@
+<!--pages/test/framework/navigator/b.wxml-->
+<text bindtap='tap'>pages/test/framework/navigator/b.wxml</text>

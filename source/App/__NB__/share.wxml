@@ -1,0 +1,24 @@
+<view class="wrapper {{animationName}}" wx:if="{{_show}}" catchtap="hide" catchanimationend="onAnimationEnd" catchtouchmove="none">
+    <image wx:if="{{isWechat}}" src="./images/share.png" style="width:100%" mode="widthFix"/>
+    <view style="position:absolute;width:100%;bottom:20px;display:flex;justify-content:center;align-items:center;flex-direction:column">
+        <view style="color:#fff;text-align:center;width:280px">
+            <image hidden="{{!_info.imgUrl}}" src="{{_info.imgUrl}}" style="width:120px;height:120px;border-radius:12px;margin-bottom:16px" mode="aspectFit"/>
+            <view>{{_info.title}}</view>
+            <view style="font-size:12px">{{_info.desc}}</view>
+        </view>
+     
+        <view wx:if="{{showSocialShare}}" class="social-share" data-mode="prepend">
+            <navigator wx:for="{{social}}" wx:key="{{index}}" class="social-icon icon-{{item}}" data-name="{{item}}" catchtap="jumpSocialShare">
+                <view wx:if="{{item=='wechat'}}" hidden="{{!qrcode_show}}" style="position:absolute;left:-66px;top:-170px">
+                    <view style="background-color:#fff;border-radius:12px;padding:8px;font-size:0;line-height:1;box-shadow:0 0 10px rgba(0, 0, 0, 0.6)">
+                        <!-- 在移动端能长按保存二维码图片 -->
+                        <img src="{{qrcode_src}}" style="width:150px;height:150px"/>
+                        <canvas hidden canvas-id="qrcodeCanvas" style="width:1200px;height:1200px"></canvas>
+                    </view>
+                    <view style="position:absolute;top:100%;left:74px;width:0;height:0;border-width:10px;border-style:solid;border-color:transparent;border-top-width:16px;border-top-color:currentColor;color:#fff;"></view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+   
+</view>

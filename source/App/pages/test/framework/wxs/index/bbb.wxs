@@ -1,0 +1,4 @@
+
+var msg = "hello nini";
+
+module.exports.message = msg;

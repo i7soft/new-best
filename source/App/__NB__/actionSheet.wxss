@@ -1,0 +1,62 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 3;
+}
+
+.mask {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.actionSheet {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 0.5rem;
+    z-index: 1001;
+    box-sizing: border-box;
+}
+
+.btn-group{
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    
+}
+
+
+.btn{
+    height: 2.2rem;
+    line-height: 2.2rem;
+    border-bottom: 1rpx solid #ddd;
+}
+
+/* @supports (backdrop-filter: saturate(180%) blur(20px)) or (-webkit-backdrop-filter: saturate(180%) blur(20px)) {
+    .btn-group{
+        background-color: rgba(255,255,255,0.7);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .btn{
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+    }
+} */
+
+
+.btn:last-child{
+    border:0;
+}
+

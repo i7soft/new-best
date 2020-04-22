@@ -1,0 +1,127 @@
+.wrapper{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: #000;
+    z-index: 1;
+}
+
+.flex{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.control-bar{
+    position:absolute;bottom:0;left:0;width: 100%;
+    color:#fff;
+    text-shadow: 0 0 4px #000;
+    flex-direction:row;
+}
+
+.bar-item{
+    flex: 1;
+    padding: 48rpx 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.control-btn{
+    font-size: 48rpx;
+    
+}
+
+
+.icon-label{
+    font-size: 24rpx;
+    margin-left: 16rpx;
+    
+}
+
+.btn-takePhoto{
+    transition: transform 200ms
+}
+
+.takePhoto-hover{
+    transform: scale(1.2);
+}
+
+.menu-mask{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%
+}
+
+.menu-content{
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size:30rpx;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.menu-item{
+    padding:48rpx;
+    
+}
+
+.menu-item text{
+    flex:1
+}
+
+.menu-item switch{
+    transform: scale(0.8);
+    transform-origin: 100% 50%;
+    opacity: 0.8;
+}
+
+.grid-row{
+    flex:1;
+    width:100%;
+    box-sizing: border-box;
+}
+
+.grid-column{
+    flex:1;
+    height:100%;
+    box-sizing: border-box;
+}
+
+.grid-line{
+    border: 1px solid rgba(255,255,255,0.5)
+}
+
+@keyframes ani_fadeIn{
+    0% {
+        opacity: 0;
+        transform: scale(2);
+    }
+    40%,100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes ani_fadeOut{
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+.countdown-fadeIn{
+    animation: ani_fadeIn ease 0.9s forwards;
+}
+
+.countdown-fadeOut{
+    animation: ani_fadeOut ease 0.1s forwards;
+}

@@ -1,0 +1,21 @@
+<canvas hidden canvas-id="tempCanvas" style="width:100px;height:100px"></canvas>
+
+<view wx:if="{{showDetail}}" style="background-color:{{backgroundColor}};color:{{fontColor}};font-size:28rpx;min-height:100vh;line-height:2">
+    <view style="text-align:center;padding:40rpx">
+        <image wx:if="{{logo}}" src="{{logo}}" mode="aspectFit" style="width:260rpx;height:260rpx;border-radius:20rpx;background:#fff"/>
+        <view style="color:{{titleColor}};font-size:36rpx;line-height:1.5">{{title}}</view>
+        <view>{{subtitle}}</view>
+    </view>
+    <view style="background-color:rgba(255,255,255,0.1);margin:20rpx;border-radius:20rpx">
+        <view wx:for="{{info}}" wx:key="index" style="display:flex;padding:20rpx">
+            <view>{{item.k}}</view>
+            <view style="color:{{titleColor}};flex:1;text-align:right">{{item.v}}</view>
+        </view>
+    </view>
+
+    <view style="text-align:center;padding:40rpx 0 60rpx 0">
+        <button wx:if="{{title}}" catchtap="copy" data-key="title" style="font-size:14px;margin:20rpx auto;width: 400rpx">{{text_copyText}}</button>
+        <button catchtap="copy" data-key="barcode" style="font-size:14px;margin:20rpx auto;width: 400rpx">{{text_copyBarCode}}</button>
+    </view>
+    
+</view>

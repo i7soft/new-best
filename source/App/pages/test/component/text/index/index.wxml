@@ -1,0 +1,11 @@
+<view class="btn-area">
+  <view class="body-view">
+    <text>{{text}}</text>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove">remove line</button>
+  </view>
+</view>
+<view>十&nbsp;七\n人</view>
+<text space="emsp" decode="{{decode}}" selectable bindtap="text_onTap">
+      我是  <block>十七&nbsp;&nbsp;人\n</block><text decode="{{decode2}}"  catchtap="text_onTap2">我是  十七&nbsp;&nbsp;人</text>
+</text>

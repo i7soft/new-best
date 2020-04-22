@@ -1,0 +1,16 @@
+<custom-ul id="aaa"><custom-ul id="bbb">
+  <view>
+  <custom-li value="{{item}}" wx:for="{{aaa}}" wx:key="{{item}}" data-id="{{item}}"> item</custom-li>
+  <custom-li> item 2 </custom-li>
+  </view>
+</custom-ul></custom-ul>
+
+<view id="outer" bindtransitionend="handleTap1">
+    outer view
+    <view id="middle" hover-class="bbb" bindtransitionend="handleTap2">
+      middle view
+      <input value='aaa' id="inner" bindtap="handleTap3">
+        inner view
+      </input>
+    </view>
+  </view>

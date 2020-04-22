@@ -1,0 +1,4 @@
+
+
+<selectable-group generic:selectableA="{{aaa}}" class="{{aaa}}" />
+ <selectable-group /> 

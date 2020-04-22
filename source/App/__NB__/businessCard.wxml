@@ -1,0 +1,14 @@
+<canvas hidden canvas-id="qrcodeCanvas" style="width:1200px;height:1200px"></canvas>
+<view wx:if="{{showDialog}}" class="dialog {{dialog_animationName}}" catchanimationend="dialog_onAnimationEnd" catchtap="dialog_close" catchtouchmove="none">
+    <view class="lpsi_view">
+        <view class="lpsi_contianer" catchtap="none">
+            <!-- 在手机浏览器不能访问通讯录的情况下，打开模态框提示用户长按图片来保存到通讯录 -->
+            <view class="lpsi_image" style="background-image:url({{qrcode_src}})">
+                <img src="{{qrcode_src}}" style="opacity:0;width:100%;height:100%;"/>
+                
+            </view>
+            <view class="lpsi_text"><text>{{text}}</text></view>
+        </view>
+        <view class="lpsi_close nb-icon nb-icon-close"></view>
+    </view>
+</view>

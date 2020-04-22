@@ -1,0 +1,96 @@
+<view class="wrapper {{animationName}}" wx:if="{{_show}}" catchanimationend="onAnimationEnd" animation="{{wrapperAnimation}}">
+    <canvas hidden canvas-id="tempCanvas" style="width:300px;height:300px"></canvas>
+    <canvas hidden canvas-id="qrcodeCanvas" style="width:1200px;height:1200px"></canvas>
+    <view class="{{blur?'blur':''}}" style="width:100%;height:100%;{{NB.IsAndroid?'':'transition:filter 0.3s ease'}}">
+        <view class="view" 
+            animation="{{viewAnimation}}"
+            catchtouchstart="onFrameTouchStart" 
+            catchtouchmove="onFrameTouchMove" 
+            catchtouchend="onFrameTouchEnd" 
+            catchtouchcancel="onFrameTouchEnd" 
+            catchmousedown="onFrameTouchStart" 
+            catchmousemove="onFrameTouchMove"
+            catchmouseup="onFrameTouchEnd"
+            catchmousewheel="onFrameMouseWheel"
+            
+            >
+            <!-- 左右滑动框 -->
+            <view animation="{{frameAnimation}}" class="view-frame">
+                <!-- 每一个图片 -->
+                <view
+                    class="frame-item" 
+                    wx:for="{{_items}}" 
+                    wx:key="{{index}}" 
+                    style="margin:0 {{_margin}}px;left:-{{_margin}}px;transform:translate3d({{item.l}}px,0,0)"
+                    >
+                    <view class="image-loader">
+                        <view class="icon-loading nb-loading nb-loading-icon"></view>
+                    </view>
+                    <image
+                        style="width:{{item.w}}px;height:{{item.h}}px;opacity:{{item.o}}"
+                        animation="{{item.a}}"
+                        class="frame-image" 
+                        mode="aspectFit"
+                        src="{{item.u}}"
+                        data-index="{{index}}"
+                        data-source-index="{{item.i}}" 
+                        bindload="onFrameImageLoad"
+                    />
+                </view>
+            </view>
+            <!-- 控制栏 -->
+            <view animation="{{controlBarAnimation}}" class="control-bars" style="transform:translate3d(0,0,0)" catchtap="onControlBarTap">
+                <!-- 顶部控制栏 -->
+                <view class="top-bar">
+                    <!-- 关闭按钮 -->
+                    <view catchtap="hide">
+                        <view class="bar-button nb-icon nb-icon-close"></view> 
+                    </view>
+                    <!-- 页数 -->
+                    <view class="bar-center">{{_currentIndex+1}} / {{_size}}</view>
+                    <!-- 显示图片列表 -->
+                    <view>
+                        <view class="bar-button nb-icon nb-icon-view-module"></view> 
+                    </view>
+                </view>
+                <!-- 底部控制栏 -->
+                <view class="bottom-bar">
+                    <view class="bar-center"></view>
+                    <!-- 下载图片 -->
+                    <view catchtap="downloadImage">
+                        <view class="bar-button nb-icon nb-icon-download" title="{{title_downloadImage}}"></view> 
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{showDialog}}" class="dialog {{dialog_animationName}}" catchanimationend="dialog_onAnimationEnd" catchtap="dialog_close" catchtouchmove="none">
+        <view class="lpsi_view">
+            <view class="lpsi_contianer" catchtap="none">
+                <!-- 在手机浏览器不能直接下载图片，打开模态框提示用户长按图片来下载 -->
+                <block wx:if="{{dialogType=='saveImage'}}">
+                    <view class="lpsi_image" style="background-image:url({{_saveImageUrl}})"><img src="{{_saveImageUrl}}" style="opacity:0;width:100%;height:100%;"/></view>
+                    <view class="lpsi_text"><text>{{text_longPressSaveImage}}</text></view>
+                </block>
+                <!-- 识别的二维码数据，如果是非链接的情况 -->
+                <block wx:elif="{{dialogType=='scanResult'}}">
+                    <scroll-view scroll-y scroll-x class="lpsi_result"><text selectable space="nbsp">{{scanResult}}</text></scroll-view>
+                    <button catchtap="copyScanResult" style="font-size:14px;margin-top:20rpx">{{text_copy}}</button>
+                </block>
+
+                <block wx:elif="{{dialogType=='share'}}">
+                    <!-- 在移动端能长按保存二维码图片 -->
+                    <img src="{{shareQrcodeSrc}}" style="width:336rpx;height:336rpx;display: block;margin:40rpx auto 20rpx;padding:20rpx;background:#fff;border-radius:20rpx;"/>
+                    <button catchtap="copyImageLink" style="font-size:14px;margin-top:20rpx">{{text_copyLink}}</button>
+                </block>
+            </view>
+            <view class="lpsi_close nb-icon nb-icon-close"></view>
+        </view>
+    </view>
+  
+  
+    <!-- <view class="list">
+    </view>
+    <view class="view">
+    </view> -->
+</view>

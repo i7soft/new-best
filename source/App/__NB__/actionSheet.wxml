@@ -1,0 +1,14 @@
+<view class="wrapper" wx:if="{{_show}}">
+    <view class="mask {{animationName_mask}}" catchanimationend="onAnimationEnd" catchtap="onCancel"></view>
+    <view class="actionSheet {{animationName_actionSheet}}">
+        <block wx:for="{{_itemList}}" wx:key="{{index}}" wx:for-item="group">
+            <view class="btn-group">
+                <navigator wx:for="{{group}}" wx:key="{{item.i}}" class="btn" style="color:{{_itemColor}}" data-index="{{item.id}}" catchtap="onConfirm">{{item.item}}</navigator>
+            </view>
+        </block>
+        
+        <view class="btn-group">
+            <navigator class="btn" catchtap="onCancel">{{button_cancel}}</navigator>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,91 @@
+<view class="wrapper {{animationName}}" wx:if="{{_show}}" catchanimationend="onAnimationEnd">
+
+    
+
+    <view style="position:relative;width:100%;height:100%">
+
+        <!-- 地图与控件 -->
+        <map wx:if="{{showMap}}" id="map" style="width:100%;height:100%" show-location latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" rotate="{{rotate}}" skew="{{skew}}" enable-3D enable-overlooking bindregionchange="regionChange" top-right-margin="{{topRightMargin}}" bottom-left-margin="{{bottomLeftMargin}}" bindupdated="onMapComplete"></map>
+        <nb-map-control scale="{{_scale}}" rotate="{{_rotate}}" skew="{{_skew}}" enable-zoom bindchange="mapCommand" bottom-right-margin="{{bottomRightMargin}}"></nb-map-control>
+
+        <cover-view class="btn btn2" catchtap="myLocation" style="position:absolute;right:20rpx;top:120rpx">
+            <cover-image src="./images/my-location.png"/>
+        </cover-view>
+
+        <view style="width:100%;position:absolute;top:120rpx;bottom:0;pointer-events:none;display:flex;flex-direction: column">
+
+            <!-- marker -->
+            <view style="flex-grow:1;display:flex;pointer-events:none;justify-content:center;align-items:center">
+                <image hidden="{{!showMarker}}" class="{{showMakerAnimation?'marker':''}}" bindanimationend="marker_onAnimationEnd" src="./images/marker2.png" style="width:30rpx;height:64rpx;transform:translateY(-50%)"></image>
+            </view>
+
+            <!-- 底部搜索结果 -->
+            <view style="height:500rpx;pointer-events:all;box-sizing:border-box;padding:20rpx;padding-bottom:{{bottomPadding}}rpx">
+                <view class="bottom">
+                    <scroll-view scroll-y style="height:{{400-bottomPadding}}rpx" scroll-with-animation scroll-top="{{scrollTop}}">
+                        <view wx:for="{{pois}}" wx:key="index" class="location-item" data-index="{{index}}" catchtap="chooseLocation" style="{{index==0?'border-top:0;padding-top:0':''}}">
+                            <view class="item-content">
+                                <view class="item-name">{{item.name}}</view>
+                                <view class="item-address">{{item.address}}</view>
+                            </view>
+                            <view class="item-icon">
+                                <icon style="opacity:{{index==locationIndex?1:0}}" type="success_no_circle" size="16" color="{{themeColor}}"/>
+                            </view>
+                        </view>
+                    </scroll-view>
+                    <view style="display:flex;text-align:center;height:80rpx;line-height:80rpx;font-size:28rpx;border-top:1px solid #ddd;">
+                        <navigator style="flex-grow:1;border-right:1px solid #ddd" catchtap="hide">{{text1}}</navigator>
+                        <navigator style="flex-grow:1;color:[themeColor]" catchtap="confirm">{{text3}}</navigator>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+
+        <!-- 黑色透明遮罩 -->
+        <view hidden="{{!showMapMask}}" class="map-mask" style="transition:opacity 200ms linear;opacity:{{mapMaskOpacity}}" catchtap="hideSearch"></view>
+
+        <!-- 顶部搜索 -->
+        <view class="top">
+            <view class="search-wrapper">
+                <view class="search-bg">
+                    <view class="search-content" style="transition:width 200ms linear;width:calc(50% - {{showSearch?cancelSearchWidth:0}}px)" bindtransitionend="onSearchAnimationEnd" catchtap="showSearch">
+                        <view class="search-border">
+                            <view class="search-content" style="padding:0;flex-grow:1;opacity:{{showSearchInput?1:0}}">
+                                <view class="search-icon nb-icon nb-icon-search"></view>
+                                <input style="flex:1" placeholder="{{text2}}" value="{{inputValue}}" focus="{{inputFocus}}" disabled="{{inputDisabled}}" bindinput="search_onInput" confirm-type="search" bindconfirm="search_onConfirm"/>
+                                <icon type="clear" size="16" catchtap="clearInput" hidden="{{!showClearInput}}" style="margin:0 16rpx"/>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="search-cancel nb-link" style="transition:opacity 200ms linear;opacity:{{showSearch?1:0}}" catchtap="hideSearch">{{text1}}</view>
+                </view>
+              
+                <!-- 独立一个层做左移动画，增强动画性能 -->
+                <view class="input-content" style="pointer-events:none;opacity:{{showSearchInput?0:1}}">
+                    <view class="input-text" style="width:auto;transition:transform 200ms linear;transform:translateX(-{{showSearch?searchInputLeft:0}}px)">
+                        <view class="search-icon nb-icon nb-icon-search"></view>
+                        <text class="input-placeholder">{{text2}}</text>
+                    </view>
+                </view>
+
+          
+            </view>
+       
+        </view>
+
+        <scroll-view hidden="{{!(pois2 && pois2.length>0)}}" scroll-y style="width:100%;position:absolute;bottom:0;left:0;top:120rpx;z-index:800" scroll-with-animation scroll-top="{{scrollTop2}}">
+            <view wx:for="{{pois2}}" wx:key="index" class="location-item" data-index="{{index}}" catchtap="chooseLocation2" style="{{index==0?'border-top:0;padding-top:0':'border-color:#ddd'}}">
+                <view class="item-content">
+                    <view class="item-name">{{item.name}}</view>
+                    <view class="item-address">{{item.address}}</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+
+   
+
+   
+
+</view>

@@ -1,0 +1,4 @@
+<progress percent="20" show-info />
+<progress percent="40" strokeWidth="12" border-radius="10"/>
+<progress percent="60" color="pink" />
+<progress percent="80" active active-color="#ff0000"  bindactiveend="aaa"/>

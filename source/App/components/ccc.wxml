@@ -1,0 +1,4 @@
+<!--components/ccc.wxml-->
+<view bindtap="onTap">
+<text>components/ccc.wxml</text>
+</view>

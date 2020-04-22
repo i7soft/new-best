@@ -1,0 +1,61 @@
+<view class="page-body">
+  <view class="page-section">
+    <view class="page-section-title">movable-view区域小于movable-area</view>
+    <movable-area bindtouchmove='touchmove'>
+      <movable-view out-of-bounds x="{{x}}" y="{{y}}" direction="all"  catchhtouchmove="htouchmove" catchvtouchmove="vtouchmove">text</movable-view>
+
+      <movable-view style='left:10%;margin:10px' direction="all">text2</movable-view>
+    </movable-area>
+  </view>
+  <view class="btn-area">
+    <button bindtap="tap" class="page-body-button" type="primary">click me to move to (30px, 30px)</button>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">movable-view区域大于movable-area</view>
+    <movable-area>
+      <movable-view scale scale-value="" out-of-bounds class="max" direction="all" x="10">text</movable-view>
+      
+    </movable-area>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">只可以横向移动</view>
+    <movable-area>
+      <movable-view direction="horizontal">text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">只可以纵向移动</view>
+    <movable-area>
+      <movable-view direction="vertical">text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">可超出边界</view>
+    <movable-area>
+      <movable-view direction="all" out-of-bounds>text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">带有惯性</view>
+    <movable-area>
+      <movable-view direction="all" inertia>text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">可放缩</view>
+    <movable-area scale-area="{{false}}">
+      <movable-view out-of-bounds direction="all" bindchange="onChange" bindscale="onScale" scale animation scale-min="0.5" scale-max="4" scale-value="{{scale}}">text</movable-view>
+      <!-- <movable-view style='width:100%;height: 100%;' direction="all" scale scale-min="0.1" scale-max="20" out-of-bounds>text2</movable-view> -->
+    </movable-area>
+  </view>
+
+  <view class="btn-area" style="margin-bottom:50px">
+    <button bindtap="tap2" class="page-body-button" type="primary">click me to scale to 3.0</button>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<!-- 引用组件的页面模版 -->
+<!-- <aaa bindcustomevent="aaa">
+   <bbb bindcustomevent="bbb"> 
+     <ccc bindcustomevent="ccc">
+    </ccc> 
+   </bbb> 
+</aaa> -->
+<!-- <aaa bindcustomevent="aaa"> 
+     <ccc bindcustomevent="ccc">
+    </ccc> 
+</aaa> -->
+<aaa bindcustomevent="aaa"> 
+</aaa>
+<view>
+  <another-component id="bobo" bind:customevent="pageEventListener1">
+    <my-component id="mimi" bind:customevent="pageEventListener2" capture-catch:customeventp="pageEventListener3"></my-component>
+    <!-- <block>
+       <view  slot="bobo" bindtap='aaa' catchtap='bbb' capture-bind:tap='ccc'>aaa</view> 
+    </block>
+      <template is="aaa"/> -->
+     
+  </another-component>
+ 
+</view>
+
+<view id="outer" catch:touchstart="handleTap1" capture-catch:touchstart="handleTap2">
+  outer view
+  <view id="inner" catch:touchstart="handleTap3" capture-bind:touchstart="handleTap4">
+    inner view
+  </view>
+</view>
+
+<template name="aaa">
+<block>
+       <view  slot="bobo" bindtap='aaa' catchtap='bbb' capture-bind:tap='ccc'>bbb</view> 
+    </block> 
+
+</template>

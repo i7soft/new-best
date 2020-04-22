@@ -1,0 +1,22 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<cover-view class="tab-bar" style="background-color:{{backgroundColor}};height:{{height}}px">
+    <block wx:if="{{position!='top'}}">
+        <cover-view wx:if="{{position!='top'}}" 
+            class="tab-bar-border" 
+            style="top:0;background-color:{{borderStyle=='white'?'rgba(255,255,255,0.8)':'rgba(0,0,0,0.33)'}}"
+        ></cover-view>
+        <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-index="{{index}}" bindtap="switchTab">
+            <view style="display: inline-block; position: relative;">
+                <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+                <view hidden="{{!item.badge}}" class="badge {{item.badge.text==''?'badge_dot':''}}" style="position: absolute; top: 0px; left: 16px;">{{item.badge.text}}</view>
+            </view>
+            <cover-view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+        </cover-view>
+    </block>
+    <block wx:else>
+        <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-index="{{index}}" bindtap="switchTab">
+            <cover-view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+            <cover-view  class="item-border" style="border-color: {{selected === index ? selectedColor : 'transparent'}}"></cover-view >
+        </cover-view>
+    </block>
+</cover-view>

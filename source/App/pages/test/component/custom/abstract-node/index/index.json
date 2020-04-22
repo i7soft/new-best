@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "selectable-group":"../components/selectable-group",
+    "custom-radio": "../components/custom-radio",
+    "custom-checkbox": "../components/custom-checkbox"
+  }
+}

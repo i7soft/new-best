@@ -1,0 +1,7 @@
+<custom-form>
+  <view>
+    input
+    <custom-input></custom-input>
+  </view>
+  <custom-submit> submit </custom-submit>
+</custom-form>

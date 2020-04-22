@@ -1,0 +1,1 @@
+<view style="font-size:12px;line-height:2;color:#666;text-align:center;padding-top:20px"><view class="nb-loading nb-loading-icon" style="margin-right:4px"></view>{{text}}</view>

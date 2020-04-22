@@ -1,0 +1,88 @@
+<button bindtap='tap'>sisi</button>
+<view style="height: 30px;background: #ff0000;top: 50px;left: 0;width: 100%;position: fixed;"></view>
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells__title">可以自动聚焦的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input style='color:#ff0000;padding:10px 0;line-height:200px' class="weui-input" value='{{value}}' cursor="3" auto-focus placeholder="将会获取焦点">888</input>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">控制最大输入长度的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input disabled class="weui-input" maxlength="10" placeholder="最大输入长度为10" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">控制输入的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  bindinput="bindReplaceInput" placeholder="连续的两个1会变成2" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">控制键盘的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input"  bindinput="bindHideKeyboard" placeholder="输入123自动收起键盘" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <label>
+      <view class="weui-cells__title">数字输入的input</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input bindinput="aaa" class="weui-input" type="number" placeholder="这是一个数字输入框" use-system-keyboard/>
+        </view>
+      </view>
+    </label>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">密码输入的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" password type="text" placeholder="这是一个密码输入框"  bindinput="aaa"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <label>
+    <view class="weui-cells__title">带小数点的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="digit" placeholder="带小数点的数字键盘" use-custom-keyboard auto-focus focus='{{focus}}' value="121212" bindinput="aaa" bindconfirm="aaa" confirm-hold="{{true}}" confirm-type="go"/>
+      </view>
+    </view>
+    </label>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">身份证输入的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" type="idcard" placeholder="身份证输入键盘" use-custom-keyboard/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">控制占位符颜色的input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" placeholder-style="color:#F76260;font-size:12px" placeholder="占位符字体是红色的" />
+      </view>
+    </view>
+  </view>
+</view>

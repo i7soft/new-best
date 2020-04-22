@@ -1,0 +1,2 @@
+<view> {{numberA}} + {{numberB}} = {{sum}} </view>
+<view>{{parseInt('98765')}}</view>

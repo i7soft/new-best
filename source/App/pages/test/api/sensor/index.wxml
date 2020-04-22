@@ -1,0 +1,7 @@
+<view style='margin-top:50px'>{{res.direction}} - {{res.accuracy}}</view>
+
+<view style='margin-top:50px'>{{parseInt(res2.x)}} - {{parseInt(res2.y)}} - {{parseInt(res2.z)}}</view>
+
+<view style='margin-top:50px'>{{parseInt(res3.alpha)}} - {{parseInt(res3.beta)}} - {{parseInt(res3.gamma)}}</view>
+
+<view style='margin-top:50px'>{{parseInt(res4.x)}} - {{parseInt(res4.y)}} - {{parseInt(res4.z)}}</view>

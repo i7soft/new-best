@@ -1,0 +1,11 @@
+<!--index/aaa.wxml-->
+<slot name="{{slot}}"/>
+
+<view><slot name="aaa"/>111</view>
+ <slot name="aaa"/>222 
+<view bindtap='aaa'>index/aaa.wxml</view>
+<slot name="bbb"/>
+
+<view>index/bbb.wxml</view>
+<slot name="ccc"/>
+<view id="aaa_fuck" class="fuck" bindtap='aaa'>index/000.wxml</view>

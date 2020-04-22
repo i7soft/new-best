@@ -1,0 +1,114 @@
+:host view{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 500rpx;
+    width:100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #cfd3d8;
+    color: #000;
+    z-index: 1000;
+    padding: 10rpx;
+    padding-bottom: 80rpx;
+}
+.key,.control{
+    width: 25%;
+    height: 25%;
+    padding: 10rpx;
+    position: absolute;
+}
+.key view,.control view{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color:#000;
+   
+    border-bottom: 2px solid #929497;
+    border-radius:10rpx;
+    box-sizing: border-box;
+    font-size: 40rpx;
+    
+}
+
+.key view{
+    background: #fff;
+    font-weight: bold;
+    
+}
+
+.control view{
+    background: #aaafb9;
+    font-weight: normal;
+}
+
+.control-backspace,.control-confirm{
+    height: 50%;
+    border-right: 0;
+    font-weight: normal;
+}
+
+.control-backspace view{
+    font-size: 50rpx;
+}
+
+.control-confirm{
+    top:50%;
+    
+    
+}
+
+.control-confirm view{
+    background: #007aff;
+    border-color:#0c3868;
+    color:#fff;
+    font-size:32rpx;
+}
+
+.key .hover{
+    background: #aaafb9;
+}
+
+.control .hover{
+    background: #fff;
+}
+
+.confirm-hover{
+    opacity: 0.85;
+}
+
+.r-1{
+    top:0;
+}
+
+.r-2{
+    top: 25%;
+}
+
+.r-3{
+    top: 50%;
+}
+
+.r-4{
+    top: 75%;
+}
+
+.c-1{
+    left: 0;
+}
+
+.c-2{
+    left:25%;
+}
+
+.c-3{
+    left:50%;
+}
+
+.c-4{
+    left:75%;
+}

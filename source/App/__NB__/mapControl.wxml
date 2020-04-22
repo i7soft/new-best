@@ -1,0 +1,37 @@
+<cover-view class="map-control o_v" style="bottom:{{_bottomRightMargin.y || 0}}px;right:{{_bottomRightMargin.x || 0}}px">
+    <!-- Mobile Safari not showing CSS transform rotateX and rotateY only rotateZ -->
+    <!-- https://stackoverflow.com/questions/26416505/mobile-safari-not-showing-css-transform-rotatex-and-rotatey-only-rotatez -->
+    <cover-view class="o_v" style="width:160rpx;height:{{_enableRotate || _enableOverlooking?160:0}}rpx;position:relative;-webkit-perspective:500px;">
+
+        <cover-view hidden="{{!_enableRotate}}" class="abs abs_100 ring o_v" catchtap="restoreRotate" catchtouchstart="rotateStart" catchtouchmove="rotateMove" catchtouchend="rotateEnd" catchtouchcancel="rotateEnd" catchmousedown="rotateStart" catchmoushmove="rotateMove" catchmouseup="rotateEnd" style="transform:perspective(500px) translate3d(0,0,0)">
+            <cover-view class="btn abs_100" style="border-radius:160rpx;box-shadow:none;-webkit-mask:radial-gradient(transparent,transparent 50rpx, #000 50rpx);mask:radial-gradient(transparent 50rpx, #000 50rpx)">
+                <cover-view class="abs_100" style="transform:rotate({{_rotate}}deg)">
+                    <cover-view class="nb-icon nb-icon-up abs" style="width:100%;text-align:center;color:#f54a4a;top:4rpx;font-size:20rpx"></cover-view>
+                    <cover-view class="rotate_scale abs" style="left:8rpx;height:4rpx;width:12rpx;top:78rpx"></cover-view>
+                    <cover-view class="rotate_scale abs" style="right:8rpx;height:4rpx;width:12rpx;top:78rpx"></cover-view>
+                    <cover-view class="rotate_scale abs" style="bottom:8rpx;width:4rpx;height:12rpx;left:78rpx"></cover-view>
+                </cover-view>
+            </cover-view>
+            <cover-view class="btn abs_100" style="background-color:transparent;border-radius:160rpx"></cover-view>
+            <cover-view class="btn abs" style="background-color:transparent;height:100rpx;width:100rpx;border-radius:100rpx;top:30rpx;left:30rpx;box-shadow:4rpx 4rpx 4rpx rgba(0, 0, 0, 0.2) inset;"></cover-view>
+        </cover-view>
+        
+        <cover-view hidden="{{!_enableOverlooking}}" class="btn abs" style="width:80rpx;height:80rpx;display:flex;justify-content:center;align-items:center;top:40rpx;left:40rpx;border-radius:80rpx;font-weight:bold;transform:perspective(50px) rotateX({{_skew/2}}deg) translateZ(4px)" catchtap="changeMode" catchtouchstart="skewStart" catchtouchmove="skewMove" catchtouchend="skewEnd" catchtouchcancel="skewEnd" catchmousedown="skewStart" catchmoushmove="skewMove" catchmouseup="skewEnd">{{_mode}}</cover-view>
+    </cover-view>
+    <cover-view class="o_v" style="display:flex;margin-top:24rpx;" hidden="{{!_enableZoom}}">
+        <cover-view class="btn btn1 nb-icon nb-icon-plus" style="margin-right:4rpx" catchtap="zoomIn"></cover-view>
+        <cover-view class="btn btn1 nb-icon nb-icon-minus" style="margin-left:4rpx" catchtap="zoomOut"></cover-view>
+    </cover-view>
+</cover-view>
+
+<cover-view class="o_v" style="position:absolute;right:12px;top:{{_topRightMargin.y || 0}}px;right:{{_topRightMargin.x ||0}}px">
+    <cover-view hidden="{{!_showSatellite}}" class="btn btn2 {{_enableSatellite?'btn-active':''}}" catchtap="changeSatellite">
+        <cover-image src="./images/map.png"/>
+    </cover-view>
+    <cover-view hidden="{{!_showTraffic}}" class="btn btn2 {{_enableTraffic?'btn-active':''}}" catchtap="changeTraffic">
+        <cover-image src="./images/traffic.png"/>
+    </cover-view>
+    <cover-view hidden="{{!_showLocation}}" class="btn btn2" catchtap="myLocation">
+        <cover-image src="./images/my-location.png"/>
+    </cover-view>
+</cover-view>

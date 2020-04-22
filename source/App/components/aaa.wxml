@@ -1,0 +1,15 @@
+<!--components/aaa.wxml-->
+<view bindcustomevent="onEvent">
+<text>components/aaa.wxml</text>
+  
+  <!-- <slot/>  -->
+   <!-- <bbb bindcustomevent="bbb">
+    <slot/> 
+  </bbb>  -->
+  <bbb bindcustomevent="bbb">
+    <ccc bindcustomevent="ccc">
+      <slot/>
+    </ccc> 
+    <slot/> 
+  </bbb> 
+</view>

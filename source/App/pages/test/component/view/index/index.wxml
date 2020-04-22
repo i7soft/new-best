@@ -1,0 +1,17 @@
+
+<view class="section" hover-class='bbb'>
+  <view class="section__title">flex-direction: row</view>
+  <view class="flex-wrp" id="wrp" style="flex-direction:row;" bindtouchend="aaa">
+    <view class="flex-item bc_green" id="item" hover-class='aaa' hover-stop-propagation hover-start-time="3000" bindtouchend="aaa">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>
+<view class="section">
+  <view class="section__title"><text style="color:#ff0000">flex-direction: column</text></view>
+  <view class="flex-wrp" style="height: 300px;flex-direction:column;">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>

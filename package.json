@@ -1,0 +1,50 @@
+{
+  "name": "nbsdk-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "localhost": "node localhost/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "adbkit": "^2.11.1",
+    "apple-model-names": "^1.1.12",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "clean-css": "^4.2.1",
+    "clone": "^2.1.2",
+    "comment-json": "^2.2.0",
+    "deep-equal": "^1.1.0",
+    "equals": "^1.0.5",
+    "html-minifier": "^4.0.0",
+    "imagemin": "^7.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "ios-sim-launcher": "^1.1.0",
+    "jimp": "^0.6.4",
+    "mime": "^2.4.4",
+    "node-ios-device": "^2.0.1",
+    "nodejs-fs-utils": "^1.2.4",
+    "plist": "^3.0.1",
+    "sharp": "^0.22.1",
+    "terser": "^4.1.4",
+    "uglify-js": "^3.6.0",
+    "watch": "^1.0.2",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@babel/preset-stage-1": "^7.0.0",
+    "@babel/preset-stage-2": "^7.0.0",
+    "@babel/preset-stage-3": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "babel-preset-minify": "^0.5.1"
+  }
+}

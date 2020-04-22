@@ -1,0 +1,12 @@
+<view class="wrapper" wx:if="{{_show}}">
+    <view hidden="{{!data.mask}}" class="mask"></view>
+    <view class="container {{animationName}}" wx:if="{{data.icon != 'none'}}">
+        <view class="icon">
+            <icon hidden="{{!(data.icon == 'success' && !data.image)}}" type="success_no_circle" size="56" color="#fff"/>
+            <image hidden="{{!data.image}}" class="icon-image" src="{{data.image}}" mode="aspectFit"/>
+            <view hidden="{{!(data.icon == 'loading' && !data.image)}}" class="icon-loading nb-loading nb-loading-icon"></view>
+        </view>
+        <text hidden="{{!data.title}}" class="title">{{data.title}}</text>
+    </view>
+    <view class="simple-toast {{animationName}}" wx:if="{{data.icon == 'none'}}"><text class="title text">{{data.title}}</text></view>
+</view>

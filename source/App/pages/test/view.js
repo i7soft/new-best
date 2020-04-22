@@ -1,0 +1,19 @@
+Page({
+    data:{
+        a:{
+            a:1,
+            b:2
+        }
+    },
+    handleTap1:function(e){
+        console.log(e)
+    },
+    handleTap2:function(e){
+        console.log(2)
+        console.log(e)
+    },
+    handleTap3:function(e){
+        console.log(3)
+        console.log(e)
+    },
+});

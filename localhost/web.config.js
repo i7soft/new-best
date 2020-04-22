@@ -1,0 +1,9 @@
+module.exports={
+    domain:'localhost',
+    port:{
+        http:4001,
+        https:4002,
+        ws:4003,
+        wss:4004
+    }
+};

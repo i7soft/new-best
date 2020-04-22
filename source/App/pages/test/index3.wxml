@@ -1,0 +1,6 @@
+<custom-ul id="aaa"><custom-ul id="bbb">
+  <view>
+  <custom-li value="{{item}}" wx:for="{{aaa}}" wx:key="{{item}}" data-id="{{item}}"> item</custom-li>
+  <custom-li> item 2 </custom-li>
+  </view>
+</custom-ul></custom-ul>

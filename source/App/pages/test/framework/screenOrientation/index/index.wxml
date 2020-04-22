@@ -1,0 +1,2 @@
+
+<view class="intro"><text>在页面的 json 文件添加属性“pageOrientation”，\n可控制页面的允许的旋转方向。\n属性值可以有：auto(默认值)、portrait 和 landscape\n如 portrait 表示页面只允许竖屏，在浏览器的表现是，会在用户旋转到横屏的时候，页面变成旋转提示页面（因为浏览器无法控制旋转方向）\n点击 chrome 模拟器上的旋转按钮可以测试效果\n如果页面没有添加 pageOrientation 属性，则属性跟随 app.json 的 pageOrientation 配置（默认是 portrait ）\n\n提示：\n小程序需要在 app.json 添加属性“resizable:true”表示允许旋转，这个属性在        NewBest 框架下无效，统一使用 pageOrientation\n</text></view>

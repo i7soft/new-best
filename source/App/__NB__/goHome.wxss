@@ -1,0 +1,20 @@
+
+
+.go-home{
+    margin:2px;
+    width: 60px;
+    height: 60px;
+    background: #000;
+    border-radius:12px;
+    /* backdrop-filter: blur(4px); */
+    color:#fff;
+}
+
+.go-home:before {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-shadow: 0 0 10px #000;
+}
