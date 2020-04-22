@@ -181,8 +181,12 @@ var autoGenerateIcon=projectConfig.autoGenerateIcon;
 (async () => {
 
     //platform-web
-    var logo_path=path.join(__dirname,'platform','web','logo');
+    var logo_path=path.join(__dirname,'debug','platform','web','logo');
     
+    if(!fs.existsSync(logo_path)){
+        fs.mkdirSync(logo_path);
+    }
+
     if(autoGenerateIcon.web.tile_squareLarge)await tinyPng(logo,path.join(logo_path ,'tile_squareLarge.png'),558,true);
     if(autoGenerateIcon.web.tile_squareMedium)await tinyPng(logo,path.join(logo_path ,'tile_squareMedium.png'),270,true);
     if(autoGenerateIcon.web.tile_squareSmall)await tinyPng(logo,path.join(logo_path ,'tile_squareSmall.png'),128,true);

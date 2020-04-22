@@ -223,7 +223,7 @@ build_app('pc');
 //生成 web 的打包代码
 mkdirsSync(path.join(__dirname,'release','platform','web'));
 
-var I7_Core=fs.readFileSync(path.join(__dirname,'platform','web','NB.config.js'),'utf-8');
+var I7_Core=fs.readFileSync(path.join(__dirname,'debug','platform','web','NB.config.js'),'utf-8');
 var bbb=babel.transform(I7_Core,{presets: ['env'],compact: false});
 I7_Core=bbb.code;
 I7_Core=I7_Core.replace('"use strict";','');
@@ -244,7 +244,7 @@ if(_result.error)console.log(_result.error);
 var nbConfig=_result.code;
 
 
-var _content=fs.readFileSync(path.join(__dirname,'platform','web','NB.index.html'),'utf-8');
+var _content=fs.readFileSync(path.join(__dirname,'debug','platform','web','NB.index.html'),'utf-8');
 _content=_content.replace(/<script.*?NB.config.js.*?>/,'<script>'+nbConfig);
 var projectConfig=JSON.parse(fs.readFileSync(path.join(__dirname,'source/project.config.json'),'utf8'));
 _content=_content.replace(/{{appName}}/g,projectConfig.appName);
@@ -293,7 +293,7 @@ var web_logo_full_path=path.join(platform_path,'web','logo');
 if(fs.existsSync(web_logo_full_path)){
     fsUtils.rmdirsSync(web_logo_full_path);
 }
-fsUtils.copySync(path.join(__dirname,'platform','web','logo'),web_logo_full_path,function(){},{});
+fsUtils.copySync(path.join(__dirname,'debug','platform','web','logo'),web_logo_full_path,function(){},{});
 
 readDirSync(web_logo_full_path,function(item,fileName){
     if(item.indexOf('.DS_Store')>-1) return;

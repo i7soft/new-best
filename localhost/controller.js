@@ -47,6 +47,9 @@ function onBeforeResopnse(ctx,data){
 
 async function response(ctx,data){
     var is_debug=ctx.query.debug || ctx.query._t;
+    if(!is_debug){
+        is_debug=ctx.header.referer.indexOf('debug=true')>-1;
+    }
     var urlPath=ctx.path;
     if(urlPath=='' || urlPath=='/'){
         urlPath='/NB.index.html';

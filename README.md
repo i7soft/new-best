@@ -31,13 +31,14 @@ NewBest 的商标申请中
 5. 在 `./project` 目录执行终端命令 `npm install`，如果因为网络原因执行命令太慢，可以直接下载 http://nb.shiqiren.com/project.zip
 6. 在 `./project/localhost` 目录执行终端命令 `npm install`，如果因为网络原因执行命令太慢，可以直接下载 http://nb.shiqiren.com/project.zip
 7. 在 `./project` 目录执行终端命令 `node init`
-8. 打开 `source/project.config.json` 配置 `appName`、`version`
-9. 打开 `source/NB.config.js` 配置 `NBConfig`
+8. 在 `./project` 目录执行终端命令 `node changeLogo`
+9. 打开 `source/project.config.json` 配置 `appName`、`version`
+10. 打开 `source/NB.config.js` 配置 `NBConfig`
     *  `home`: 配置默认主页
     *  `url`: 配置网页的域名
     *  `rootPath`: 配置网页的运行根目录
     *  需要后台代码支持，并配置跨域规则 `NBConfig.runtime.web.crossDomain`，需要跨域的原始 url 会放在请求头 `nb-origin-url`
-10. 打开 `./localhost/web.config.js` 配置你自己的域名和端口
+11. 打开 `./localhost/web.config.js` 配置你自己的域名和端口
 
 ## 运行项目
 1. 在 `./project` 目录执行终端命令 `node watch`
