@@ -4,6 +4,6 @@
     //     "projectRoot":"./platform/mobileReactNative"
     // },
     // https://github.com/microsoft/vscode-react-native/blob/master/doc/debugging.md
-    "react-native-tools.projectRoot": "./platform/mobileReactNative",
+    "react-native-tools.projectRoot": "./debug/platform/mobileReactNative",
     "java.configuration.updateBuildConfiguration": "interactive"
 }

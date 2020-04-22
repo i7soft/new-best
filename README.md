@@ -20,7 +20,7 @@ NewBest 的特点是，直接把小程序开发的文件夹丢进来就可以直
 * http://nb.shiqiren.com/NB.index.html
 
 
-##初始化项目
+## 初始化项目
 1. 把文件下载下来
 2. 把小程序源代码目录里面的子目录和文件，复制到 `./source/App` 里面
 3. 把一个 png 格式的 logo 文件命名为 `logo.png` 复制到 `./source` 里面
@@ -65,8 +65,9 @@ NewBest 的特点是，直接把小程序开发的文件夹丢进来就可以直
       - `www.shiqiren.com`举例的证书文件夹，自己自行修改
     - `index.js`简易后台入口文件
     - `web.config.js`后台域名配置和端口配置，为了便于本地调试，可以修改本地的 host 文件，或者在路由器直接修改 host（本人用的是 360 的路由器，可以在路由的层面上直接修改 host）
-+ `platform`
-    - `web` debug 模式下的代码
++ `debug`
+    - `platform`
+        - `web` release 模式下的代码
 + `release`
     - `platform`
         - `web` release 模式下的代码

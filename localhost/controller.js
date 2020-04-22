@@ -53,7 +53,7 @@ async function response(ctx,data){
     }
     urlPath=decodeURIComponent(urlPath);
     var appRoot='../release/platform/web';
-    if(is_debug)appRoot='../platform/web';
+    if(is_debug)appRoot='../debug/platform/web';
     var staticFile=path.join(__dirname,appRoot,urlPath);
  
     if(fs.existsSync(staticFile)){
